@@ -1,25 +1,59 @@
 import React from 'react'
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
 
-const ImageBox = styled.div({ 
-  maxWidth: `300px`, 
-  marginBottom: `1.45rem` 
+const PostPreview = styled.div({
+  display: 'flex',
+  justifyContent: 'space-between',
+  padding: '1rem 0',
+  borderBottom: '1px dashed #3333',
+  '&:last-of-type': {
+    marginBottom: '1rem'
+  }
 })
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <ImageBox>
-      <Image />
-    </ImageBox>
-  </Layout>
-)
+export const Description = styled.div({
+  marginBottom: '2rem'
+})
+
+const IndexPage = ({ data }) => {
+  const { edges } = data.allMarkdownRemark
+  return (
+    <Layout showDescription>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      {edges.map((el, index) => {
+        const { path, title, date } = el.node.frontmatter
+        return (
+          <PostPreview key={index}>
+            <div><Link to={path}>{title}</Link></div>
+            <div>
+              <small>{date}</small>
+            </div>
+          </PostPreview>
+        )
+      })}
+    </Layout>
+  )
+}
+
+export const indexPostQuery = graphql`
+  query IndexPostQuery {
+    allMarkdownRemark(limit: 10, sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            keywords
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
