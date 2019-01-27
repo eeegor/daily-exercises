@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 const Post = styled.div({
-  padding: '4rem 0'
+  padding: 0
 })
 const Content = styled.div({})
 
