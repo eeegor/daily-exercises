@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import Header from './header'
 import GlobalStyle from '../styled/GlobalStyle'
+import Header from './header'
+import Footer from './footer'
 
 export const Container = styled.div({
   margin: '0 auto',
@@ -28,11 +29,10 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           {children}
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer 
+            siteAuthor={data.site.siteMetadata.author} 
+            siteAuthorUrl={"https://egorkirpichev.com/"} 
+          />
         </Container>
         <GlobalStyle />
       </>
