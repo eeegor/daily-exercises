@@ -4,7 +4,6 @@ import React from 'react'
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div({
-  background: 'rebeccapurple',
   marginBottom: '1.45rem'
 })
 
@@ -17,7 +16,6 @@ const HeaderContainer = styled.div({
 const H1 = styled.h1({
   margin: 0,
   a: {
-    color: 'white',
     textDecoration: 'none'
   }
 })
@@ -35,11 +33,11 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ''
 }
 
 export default Header
