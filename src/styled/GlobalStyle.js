@@ -1,8 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 import typography from './_typography'
 
-const theme = {
+export const theme = {
 	colors: {
+		headers: '#333',
+    text: '#666',
+    code: '#444',
 		link: '#08f'
 	}
 }
@@ -20,7 +23,8 @@ const GlobalStyle = createGlobalStyle({
 	html: {
 	  fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif',
 	  fontSize: '18px',
-	  lineHeight: '2rem'
+		lineHeight: '2rem',
+		color: theme.colors.text
 	},
 	...typography(theme)
 })

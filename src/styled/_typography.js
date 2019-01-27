@@ -6,32 +6,30 @@ const defaultHeadersMargin = {
 	marginTop: '2rem'
 }
 
-const headers = () => ({
+const headers = ({ colors }) => ({
+	'h1, h2, h3, h4, h5, h6': {
+		...defaultHeadersMargin,
+		color: colors.headers
+	},
 	h1: {
 		fontSize: '2rem',
-		lineHeight: '3rem',
-		...defaultHeadersMargin
+		lineHeight: '3rem'
 	},
 	h2: {
 		fontSize: '1.5rem',
-		lineHeight: '3rem',
-		...defaultHeadersMargin
+		lineHeight: '3rem'
 	},
 	h3: {
-		fontSize: '1.25rem',
-		...defaultHeadersMargin
+		fontSize: '1.25rem'
 	},
 	h4: {
-		fontSize: '1.15rem',
-		...defaultHeadersMargin
+		fontSize: '1.15rem'
 	},
 	h5: {
-		fontSize: '1rem',
-		...defaultHeadersMargin
+		fontSize: '1rem'
 	},
 	h6: {
-		fontSize: '0.85rem',
-		...defaultHeadersMargin
+		fontSize: '0.85rem'
 	}
 })
 
@@ -41,7 +39,7 @@ const text = () => ({
 	}
 })
 
-const code = () => ({
+const code = ({ colors }) => ({
 	pre: {
 		padding: '1rem',
 		overflowX: 'scroll',
@@ -50,7 +48,8 @@ const code = () => ({
 		fontSize: '0.9rem',
 		lineHeight: '1.5rem',
 		fontFamily: 'monospace',
-		borderRadius: '4px'
+		borderRadius: '4px',
+		color: colors.code
 	}
 })
 
@@ -74,11 +73,11 @@ const lists = () => ({
 })
 
 const typography = (theme) => ({
-	...headers(),
+	...headers(theme),
 	...text(),
 	...links(theme),
 	...lists(),
-	...code()
+	...code(theme)
 })
 
 export default typography
