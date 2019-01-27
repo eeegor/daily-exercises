@@ -13,13 +13,19 @@ export const Container = styled.div({
   paddingTop: 0
 })
 
-const Layout = ({ children }) => (
+export const Description = styled.div({
+  marginBottom: '1rem'
+})
+
+const Layout = ({ children, showDescription }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            description
+            author
           }
         }
       }
@@ -28,6 +34,11 @@ const Layout = ({ children }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
+          {showDescription && 
+            <Description>
+              {data.site.siteMetadata.description}
+            </Description>
+          }
           {children}
           <Footer 
             siteAuthor={data.site.siteMetadata.author} 
