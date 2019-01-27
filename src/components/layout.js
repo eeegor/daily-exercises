@@ -5,9 +5,9 @@ import styled from 'styled-components'
 import Header from './header'
 import './layout.css'
 
-const Container = styled.div({
+export const Container = styled.div({
   margin: '0 auto',
-  maxWidth: 960,
+  maxWidth: '960px',
   padding: '0px 1.0875rem 1.45rem',
   paddingTop: 0
 })

@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div({
 
 const HeaderContainer = styled.div({
   margin: '0 auto',
-  maxWidth: 960,
+  maxWidth: '960px',
   padding: '1.45rem 1.0875rem'
 })
 
