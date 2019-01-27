@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Header from './header'
-import './layout.css'
+import GlobalStyle from '../styled/GlobalStyle'
 
 export const Container = styled.div({
   margin: '0 auto',
@@ -34,6 +34,7 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </Container>
+        <GlobalStyle />
       </>
     )}
   />
