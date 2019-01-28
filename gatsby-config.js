@@ -3,6 +3,7 @@ module.exports = {
     title: `Daily Exercises`,
     description: `A collection of daily notes, snippets and shortcuts for full-stack web development`,
     author: `@eeegor`,
+    authorUrl: `https://egorkirpichev.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

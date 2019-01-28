@@ -6,13 +6,11 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 const Post = styled.div({
-  padding: 0
+  padding: 0,
 })
 const Content = styled.div({})
 
-export default function Template({
-  data
-}) {
+export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (

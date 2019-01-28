@@ -10,11 +10,11 @@ export const Container = styled.div({
   margin: '0 auto',
   maxWidth: '960px',
   padding: '0px 1.0875rem 1.45rem',
-  paddingTop: 0
+  paddingTop: 0,
 })
 
 export const Description = styled.div({
-  marginBottom: '1rem'
+  marginBottom: '1rem',
 })
 
 const Layout = ({ children, showDescription }) => (
@@ -34,15 +34,13 @@ const Layout = ({ children, showDescription }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
-          {showDescription && 
-            <Description>
-              {data.site.siteMetadata.description}
-            </Description>
-          }
+          {showDescription && (
+            <Description>{data.site.siteMetadata.description}</Description>
+          )}
           {children}
-          <Footer 
-            siteAuthor={data.site.siteMetadata.author} 
-            siteAuthorUrl={"https://egorkirpichev.com/"} 
+          <Footer
+            siteAuthor={data.site.siteMetadata.author}
+            siteAuthorUrl={'https://egorkirpichev.com/'}
           />
         </Container>
         <GlobalStyle />
