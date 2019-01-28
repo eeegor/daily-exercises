@@ -1,9 +1,9 @@
 ---
 
 path: "/javascript-prototype-chain"
-title: "Javascript prototype chain"
+title: "Prototype Chain"
 date: "2019-01-27"
-keywords: ['javascript', 'ecmascript', 'prototype chain']
+keywords: ['javascript', 'prototype chain']
 
 ---
 

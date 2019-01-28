@@ -1,9 +1,9 @@
 ---
 
 path: "/javascript-functions"
-title: "Javascript functions"
+title: "Functions"
 date: "2019-01-27"
-keywords: ['javascript', 'ecmascript', 'functions']
+keywords: ['javascript', 'functions']
 
 ---
 

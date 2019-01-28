@@ -1,9 +1,9 @@
 ---
 
 path: "/javascript-iife"
-title: "Javascript iife"
+title: "IIFE"
 date: "2019-01-27"
-keywords: ['javascript', 'ecmascript', 'iife']
+keywords: ['javascript', 'iife']
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 
 path: "/javascript-this"
-title: "Javascript this"
+title: "this"
 date: "2019-01-27"
-keywords: ['javascript', 'ecmascript', 'this']
+keywords: ['javascript', 'this']
 
 ---
 

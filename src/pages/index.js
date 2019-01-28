@@ -15,6 +15,14 @@ const PostPreview = styled.div({
   },
 })
 
+const Tag = styled.span({
+  padding: '0.25rem 0.5rem',
+  background: '#3331',
+  marginLeft: '0.25rem',
+  fontSize: '0.75rem',
+  borderRadius: '0.125rem'
+})
+
 export const Description = styled.div({
   marginBottom: '2rem',
 })
@@ -25,14 +33,14 @@ const IndexPage = ({ data }) => {
     <Layout showDescription>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       {edges.map((el, index) => {
-        const { path, title, date } = el.node.frontmatter
+        const { path, title, date, keywords } = el.node.frontmatter
         return (
           <PostPreview key={index}>
             <div>
               <Link to={path}>{title}</Link>
             </div>
             <div>
-              <small>{date}</small>
+              <small>{keywords.map(word => <Tag key={word}>{word}</Tag>)}</small>
             </div>
           </PostPreview>
         )

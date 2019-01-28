@@ -1,9 +1,9 @@
 ---
 
 path: "/javascript-hoisting"
-title: "Javascript hoisting"
+title: "Hoisting"
 date: "2019-01-27"
-keywords: ['javascript', 'ecmascript', 'hoisting']
+keywords: ['javascript', 'hoisting']
 
 ---
 

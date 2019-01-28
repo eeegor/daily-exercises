@@ -1,9 +1,9 @@
 ---
 
 path: "/javascript-scope"
-title: "Javascript scope"
+title: "Scope"
 date: "2019-01-27"
-keywords: ['javascript', 'ecmascript', 'scope']
+keywords: ['javascript', 'scope']
 
 ---
 

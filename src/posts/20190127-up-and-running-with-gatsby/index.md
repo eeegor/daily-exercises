@@ -1,7 +1,7 @@
 ---
 
-path: "/up-and-running-with-gatsby"
-title: "Up and running with Gatsby"
+path: "/up-and-running-with-gatsby-js"
+title: "Up and running with Gatsby.js"
 date: "2019-01-27"
 keywords: ['react', 'gatsby']
 
